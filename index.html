@@ -366,14 +366,13 @@
         }
         // #endregion
 
-        // #region Event Listeners & Startup
-        window.onload = () => {
-            getElementById("weightInput").addEventListener("keypress", (event) => {
-                if (event.key === "Enter") addNewWeight();
-            });
-            getElementById("googleLoginBtn").addEventListener("click", loginWithGoogle);
-            getElementById("demoLoginBtn").addEventListener("click", startDemoMode);
-            auth.onAuthStateChanged(handleAuthChanged);
+// #region Event Listeners & Startup
+getElementById("weightInput").addEventListener("keypress", (event) => {
+    if (event.key === "Enter") addNewWeight();
+});
+getElementById("googleLoginBtn").addEventListener("click", loginWithGoogle);
+getElementById("demoLoginBtn").addEventListener("click", startDemoMode);
+auth.onAuthStateChanged(handleAuthChanged);
         };
         // #endregion
 
