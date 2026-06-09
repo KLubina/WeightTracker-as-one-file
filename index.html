@@ -329,22 +329,21 @@
         // #endregion
 
         // #region Authentication
-        const userIsLoggedIn = (user) => Boolean(user);
-        function handleAuthChanged(user) {
-            const isLoggedIn = userIsLoggedIn(user);
-            toggleUiState(isLoggedIn);
-            if (isLoggedIn) {
-                showAllWeights();
-            } else {
-                clearWeightList();
-            }
-        }
-        function loginWithGoogle() {
-            return auth.signInWithPopup(googleProvider).catch(error => {
-                alert("Login fehlgeschlagen: " + error.message);
-            });
-        }
-        // #endregion
+function handleAuthChanged(user) {
+    const isLoggedIn = Boolean(user);
+    toggleUiState(isLoggedIn);
+    if (isLoggedIn) {
+        showAllWeights();
+    } else {
+        clearWeightList();
+    }
+}
+function loginWithGoogle() {
+    return auth.signInWithPopup(googleProvider).catch(error => {
+        alert("Login fehlgeschlagen: " + error.message);
+    });
+}
+// #endregion
 
         // #region Demo Mode
         function startDemoMode() {
