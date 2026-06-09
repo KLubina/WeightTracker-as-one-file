@@ -196,9 +196,9 @@
             element.style.display = displayValue;
         };
         function toggleUiState(isLoggedIn) {
-            setDisplayStyle(loginContainer(), isLoggedIn ? "none" : "flex");
-            setDisplayStyle(appContainer(), isLoggedIn ? "block" : "none");
-        }
+    loginContainer().style.display = isLoggedIn ? "none" : "flex";
+    appContainer().style.display = isLoggedIn ? "block" : "none";
+}
         // #endregion
 
         // #region Database Queries 
