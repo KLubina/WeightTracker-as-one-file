@@ -186,9 +186,6 @@
         const weightList = () => getElementById("weightList");
         const loginContainer = () => getElementById("loginContainer");
         const appContainer = () => getElementById("appContainer");
-        const setDisplayStyle = (element, displayValue) => {
-            element.style.display = displayValue;
-        };
         function toggleUiState(isLoggedIn) {
     loginContainer().style.display = isLoggedIn ? "none" : "flex";
     appContainer().style.display = isLoggedIn ? "block" : "none";
